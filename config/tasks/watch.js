@@ -62,7 +62,6 @@ export default function () {
       }, 'umd'))
       .pipe(plumber({ errorHandler: handleError }))
       .pipe(sourcemaps.init())
-      .pipe(babel({ compact: true }))
       .pipe(concat(jsFileName))
       .pipe(terser())
       .pipe(sourcemaps.write())
